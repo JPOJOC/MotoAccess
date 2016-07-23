@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
-  resources :publishes
-  get 'publishes/show'
+  
   devise_for :users
+  get 'publishes/show'
+  resources :publishes
   root "publishes#index"
   
   # The priority is based upon order of creation: first created -> highest priority.

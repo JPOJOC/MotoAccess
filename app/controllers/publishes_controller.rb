@@ -10,7 +10,7 @@ class PublishesController < ApplicationController
   # GET /publishes/1
   # GET /publishes/1.json
   def show
-    @user = User.find(params[:id])
+    @user = Publish.find(params[:id])
   end
 
   # GET /publishes/new
@@ -26,6 +26,7 @@ class PublishesController < ApplicationController
   # POST /publishes.json
   def create
     @publish = Publish.new(publish_params)
+    puts publish_params
 
     respond_to do |format|
       if @publish.save
@@ -70,6 +71,6 @@ class PublishesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def publish_params
-      params.require(:publish).permit(:make, :description, :price)
+      params.require(:publish).permit(:make, :description, :price, :image)
     end
 end

@@ -16,5 +16,11 @@
   <%= @publish.price %>
 </p>
 
+<p>
+  <strong>Image:</strong>
+  <%= image_tag @publish.image %>
+</p>
+
+
 <%= link_to 'Edit', edit_publish_path(@publish) %> |
 <%= link_to 'Back', publishes_path %>

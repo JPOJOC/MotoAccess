@@ -9,3 +9,4 @@ class CreatePublishes < ActiveRecord::Migration
     end
   end
 end
+
